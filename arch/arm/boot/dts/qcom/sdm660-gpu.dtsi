@@ -565,7 +565,7 @@
 
 				/* SVS_L1 */
 				qcom,gpu-pwrleve0@0 {
-					reg = <1>;
+					reg = <0>;
 					qcom,gpu-freq = <430000000>;
 					qcom,bus-freq = <11>;
 					qcom,bus-min = <10>;
