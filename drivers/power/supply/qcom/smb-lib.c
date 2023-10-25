@@ -1076,7 +1076,7 @@ override_suspend_config:
 			 * For std cable with type = CDP override only if
 			 * current is not 1500mA
 			 */
-			override = false;
+			override = true;
 	}
 
 	/* enforce override */
