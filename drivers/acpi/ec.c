@@ -1608,7 +1608,7 @@ error:
 	return -ENODEV;
 }
 
-static unsigned int param_set_event_clearing(const char *val, struct kernel_param *kp)
+static int param_set_event_clearing(const char *val, struct kernel_param *kp)
 {
 	int result = 0;
 
@@ -1626,7 +1626,7 @@ static unsigned int param_set_event_clearing(const char *val, struct kernel_para
 	return result;
 }
 
-static unsigned int param_get_event_clearing(char *buffer, struct kernel_param *kp)
+static int param_get_event_clearing(char *buffer, struct kernel_param *kp)
 {
 	switch (ec_event_clearing) {
 	case ACPI_EC_EVT_TIMING_STATUS:

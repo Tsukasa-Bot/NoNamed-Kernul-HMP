@@ -2632,7 +2632,7 @@ err_sess_abort:
 	return;
 }
 
-void msm_comm_handle_thermal_event(void)
+void msm_comm_handle_thermal_event()
 {
 	struct msm_vidc_core *core;
 
