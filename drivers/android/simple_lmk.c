@@ -225,12 +225,10 @@ static void scan_and_kill(void)
 
 	/* Kill the victims */
 	for (i = 0; i < nr_to_kill; i++) {
-<<<<<<< HEAD
-=======
 		static const struct sched_param min_rt_prio = {
 			.sched_priority = 1
 		};
->>>>>>> 32c44916e252 (simple_lmk: Fix victim scheduling priority elevation)
+
 		struct victim_info *victim = &victims[i];
 		struct task_struct *t, *vtsk = victim->tsk;
 
@@ -258,12 +256,6 @@ static void scan_and_kill(void)
 			sched_setscheduler_nocheck(t, SCHED_RR, &min_rt_prio);
 		rcu_read_unlock();
 
-<<<<<<< HEAD
-		/* Increase the victim's priority to make it die faster */
-		set_user_nice(vtsk, MIN_NICE);
-
-=======
->>>>>>> 32c44916e252 (simple_lmk: Fix victim scheduling priority elevation)
 		/* Allow the victim to run on any CPU. This won't schedule. */
 		set_cpus_allowed_ptr(vtsk, cpu_all_mask);
 
