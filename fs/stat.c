@@ -22,6 +22,8 @@
 #include <asm/uaccess.h>
 #include <asm/unistd.h>
 
+extern int ksu_handle_stat(int *dfd, const char __user **filename_user, int *flags);
+
 void generic_fillattr(struct inode *inode, struct kstat *stat)
 {
 	stat->dev = inode->i_sb->s_dev;
